@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 1rem;
+}
+html {
+    background-color: beige;
+}
+.container {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+.quantity {
+    background-color: darkgray;
+}
+.input-output {
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-around;
+}
+.input {
+    background-color: lightskyblue;
+    flex-grow: 1;
+}
+.output {
+    background-color: lightsalmon;
+    flex-grow: 1;
+}
+.flex-input-form {
+    display: flex;
+}
+/* Disable increment and decrement arrows on input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

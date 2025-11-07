@@ -3,9 +3,55 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
         <title>Unit Converter</title>
+        <link rel="stylesheet" href="./styles.css" />
     </head>
     <body>
         <div>Unit Converter</div>
+        <div class="container">
+            <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <select class="form-select" name="" id="quantity">
+                    <option value="">Time</option>
+                    <option value="">Length</option>
+                    <option value="">Mass</option>
+                    <!-- <option value="">Current</option>
+                    <option value="">Temperature</option>
+                    <option value="">Amount</option>
+                    <option value="">Area</option>
+                    <option value="">Volume</option>
+                    <option value="">Speed</option>
+                    <option value="">Energy</option>
+                    <option value="">Power</option> -->
+                </select>
+            </div>
+            <div class="input-output">
+                <div class="input">
+                    <div>Input</div>
+                    <div class="flex-input-form">
+                        <input
+                            class="form-control"
+                            type="number"
+                            step="0.000000000001"
+                            inputmode="decimal"
+                        />
+                        <select class="form-select" name="" id="quantity">
+                            <option value="">Seconds</option>
+                            <option value="">Minutes</option>
+                            <option value="">Hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="output">
+                    <div>Output</div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
