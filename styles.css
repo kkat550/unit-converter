@@ -3,30 +3,37 @@
     padding: 1rem;
 }
 html {
-    background-color: beige;
+    /* background-color: beige; */
 }
 .container {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     display: flex;
     flex-direction: column;
 }
 .quantity {
-    background-color: darkgray;
+    /* background-color: darkgray; */
+    max-width: 20rem;
 }
 .input-output {
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .input {
     background-color: lightskyblue;
     flex-grow: 1;
+    max-width: 40rem;
 }
 .output {
     background-color: lightsalmon;
     flex-grow: 1;
+    max-width: 40rem;
 }
 .flex-input-form {
+    display: flex;
+}
+.flex-output-form {
     display: flex;
 }
 /* Disable increment and decrement arrows on input */
