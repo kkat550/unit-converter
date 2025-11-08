@@ -11,24 +11,31 @@
         />
         <title>Unit Converter</title>
         <link rel="stylesheet" href="./styles.css" />
+        <!-- <script src="./javascript.js"></script> -->
     </head>
     <body>
+        <p id="1"></p>
         <div>Unit Converter</div>
         <div class="container">
             <div class="quantity">
                 <label for="quantity">Quantity:</label>
-                <select class="form-select" name="" id="quantity">
-                    <option value="">Time</option>
-                    <option value="">Length</option>
-                    <option value="">Mass</option>
-                    <!-- <option value="">Current</option>
-                    <option value="">Temperature</option>
-                    <option value="">Amount</option>
-                    <option value="">Area</option>
-                    <option value="">Volume</option>
-                    <option value="">Speed</option>
-                    <option value="">Energy</option>
-                    <option value="">Power</option> -->
+                <select
+                    id="quantityId"
+                    class="form-select"
+                    name=""
+                    id="quantity"
+                >
+                    <option value="Time">Time</option>
+                    <option value="Length">Length</option>
+                    <option value="Mass">Mass</option>
+                    <option value="Current">Current</option>
+                    <option value="Temperature">Temperature</option>
+                    <option value="Amount">Amount</option>
+                    <option value="Area">Area</option>
+                    <option value="Volume">Volume</option>
+                    <option value="Speed">Speed</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Power">Power</option>
                 </select>
             </div>
             <div class="input-output">
@@ -37,9 +44,11 @@
                     <div class="flex-input-form">
                         <input
                             class="form-control"
+                            id="inputNumberId"
                             type="number"
                             step="0.000000000001"
                             inputmode="decimal"
+                            placeholder="Enter some text"
                         />
                         <select class="form-select" name="" id="quantity">
                             <option value="">Seconds</option>
@@ -53,9 +62,11 @@
                     <div class="flex-output-form">
                         <input
                             class="form-control"
+                            id="outputNumberId"
                             type="number"
                             step="0.000000000001"
                             inputmode="decimal"
+                            placeholder="Enter some text"
                         />
                         <select class="form-select" name="" id="quantity">
                             <option value="">Seconds</option>
@@ -66,5 +77,6 @@
                 </div>
             </div>
         </div>
+        <script src="./javascript.js"></script>
     </body>
 </html>
