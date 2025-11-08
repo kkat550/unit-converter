@@ -1,19 +1,19 @@
-console.log("hello");
-
 let quantityBox = document.getElementById("quantityId");
 quantityBox.addEventListener("input", printFunctionQ);
 
 function printFunctionQ() {
     let selectedOptionIndex = quantityBox.options[quantityBox.selectedIndex];
     selectedOption = selectedOptionIndex.value;
-    console.log(selectedOption);
+    let quantityOption = selectedOption;
+    // console.log(quantityOption);
 }
 
 let inputElement = document.getElementById("inputNumberId");
 inputElement.addEventListener("input", printFunctionIN);
 
 function printFunctionIN(inputElement) {
-    console.log(inputElement.target.value);
+    let inputValue = inputElement.target.value;
+    // console.log(inputValue);
 }
 
 let inputBox = document.getElementById("inputBoxId");
@@ -22,14 +22,16 @@ inputBox.addEventListener("input", printFunctionIB);
 function printFunctionIB() {
     let selectedOptionIndex = inputBox.options[inputBox.selectedIndex];
     selectedOption = selectedOptionIndex.value;
-    console.log(selectedOption);
+    let inputOption = selectedOption;
+    // console.log(inputOption);
 }
 
 let outputElement = document.getElementById("outputNumberId");
 outputElement.addEventListener("input", printFunctionON);
 
 function printFunctionON(outputElement) {
-    console.log(outputElement.target.value);
+    let outputValue = outputElement.target.value;
+    // console.log(outputValue);
 }
 
 let outputBox = document.getElementById("outputBoxId");
@@ -38,22 +40,12 @@ outputBox.addEventListener("input", printFunctionOB);
 function printFunctionOB() {
     let selectedOptionIndex = outputBox.options[outputBox.selectedIndex];
     selectedOption = selectedOptionIndex.value;
-    console.log(selectedOption);
+    let outputOption = selectedOption;
+    // console.log(outputOption);
 }
 
-// while (true) {
-//     let inputElement = document.getElementById("inputNumberId");
-//     let inputValue = inputElement.value;
-//     console.log(inputElement);
-//     console.log(inputValue);
-// }
-// let testElement = document.getElementById("inputNumberId").text;
-// testElement.addEventListener("input")
-// const input = document.getElementById("inputNumberId");
-// const log = document.getElementById("1");
-
-// input.addEventListener("input", updateValue);
-
-// function updateValue(e) {
-//   log.textContent = e.target.value;
-// }
+// quantityOption -> the quantity
+// inputValue -> the value of input
+// outputValue -> the value of output
+// inputOption -> the unit of input
+// outputOption -> the unit of output
