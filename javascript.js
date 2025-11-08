@@ -38,7 +38,9 @@ function functionInputBox() {
     let selectedOptionIndex = inputBox.options[inputBox.selectedIndex];
     selectedOption = selectedOptionIndex.value;
     inputOption = selectedOption;
-    changeOutputValue(computeValue(inputValue, inputOption, outputOption));
+    if (inputValue != null || outputBox != null) {
+        changeOutputValue(computeValue(inputValue, inputOption, outputOption));
+    }
     // console.log(inputOption);
 }
 
@@ -58,7 +60,9 @@ function functionOutputBox() {
     let selectedOptionIndex = outputBox.options[outputBox.selectedIndex];
     selectedOption = selectedOptionIndex.value;
     outputOption = selectedOption;
-    changeInputValue(computeValue(outputValue, outputOption, inputOption));
+    if (outputValue != null || inputOption != null) {
+        changeInputValue(computeValue(outputValue, outputOption, inputOption));
+    }
     // console.log(outputOption);
 }
 
