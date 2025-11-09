@@ -38,9 +38,7 @@ function functionInputBox() {
     let selectedOptionIndex = inputBox.options[inputBox.selectedIndex];
     selectedOption = selectedOptionIndex.value;
     inputOption = selectedOption;
-    if (inputValue != null || outputBox != null) {
-        changeOutputValue(computeValue(inputValue, inputOption, outputOption));
-    }
+    changeOutputValue(computeValue(inputValue, inputOption, outputOption));
     // console.log(inputOption);
 }
 
@@ -60,9 +58,7 @@ function functionOutputBox() {
     let selectedOptionIndex = outputBox.options[outputBox.selectedIndex];
     selectedOption = selectedOptionIndex.value;
     outputOption = selectedOption;
-    if (outputValue != null || inputOption != null) {
-        changeInputValue(computeValue(outputValue, outputOption, inputOption));
-    }
+    changeInputValue(computeValue(outputValue, outputOption, inputOption));
     // console.log(outputOption);
 }
 
@@ -78,5 +74,34 @@ function computeValue(startingValue, startingUnit, endUnit) {
     if (startingValue == null || startingUnit == undefined || endUnit == null) {
         return;
     }
-    return 1;
+    switch (startingUnit) {
+        case "Seconds":
+            switch (endUnit) {
+                case "Seconds":
+                    return startingValue;
+                case "Minutes":
+                    return startingValue / 60;
+                case "Hours":
+                    return startingValue / 3600;
+            }
+        case "Minutes":
+            switch (endUnit) {
+                case "Seconds":
+                    return startingValue * 60;
+                case "Minutes":
+                    return startingValue;
+                case "Hours":
+                    return startingValue / 60;
+            }
+        case "Hours":
+            switch (endUnit) {
+                case "Seconds":
+                    return startingValue * 3600;
+                case "Minutes":
+                    return startingValue * 60;
+                case "Hours":
+                    return startingValue;
+            }
+    }
+    return;
 }
